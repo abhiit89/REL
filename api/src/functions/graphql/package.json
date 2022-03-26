@@ -4,11 +4,15 @@
   "description": "netlify functions:create - set up for apollo graphql",
   "main": "graphql.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.14.2",
     "neo4j-graphql-js": "^2.14.2",
-    "neo4j-driver": "^4.0.2"
-  }
+    "neo4j-driver": "^4.0.2",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
